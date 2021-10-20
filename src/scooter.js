@@ -16,7 +16,8 @@ class Scooter {
         return (this.scooterCharge? true : false)
     }
 
-    charge() {
+    async charge() {
+        await new Promise(resolve => setTimeout(resolve, 2000));
         this.scooterCharge = 1;
     }
 

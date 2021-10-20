@@ -84,8 +84,8 @@ describe('User class tests', () => {
         expect(() => user1.reportBroken(scooter3))
             .toThrowError('Scooter was not found in scooter list')
     })
-    test('charge() works properly', () => {
-        scooter2.charge()
+    test('charge() works properly', async () => {
+        await scooter2.charge()
         expect(scooter2.scooterCharge).toBe(1)
     })
 })
